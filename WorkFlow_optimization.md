@@ -2,14 +2,6 @@
 pip install gurobipy
 ```
 
-    Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-    Collecting gurobipy
-      Downloading gurobipy-10.0.1-cp39-cp39-manylinux2014_x86_64.whl (12.8 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12.8/12.8 MB[0m [31m18.5 MB/s[0m eta [36m0:00:00[0m
-    [?25hInstalling collected packages: gurobipy
-    Successfully installed gurobipy-10.0.1
-
-
 
 ```python
 import sys
@@ -26,9 +18,6 @@ from gurobipy import GRB
 from google.colab import drive
 drive.mount('/content/drive')
 ```
-
-    Mounted at /content/drive
-
 
 
 ```python
@@ -47,6 +36,8 @@ G.add_edges_from(data['edges'])
 n = len(G.nodes)
 I = G.edges()
 ```
+
+## Optimize Workflow using Gurobi
 
 
 ```python
@@ -166,29 +157,3 @@ try :
 except Exception as e:
     print("Cannot progress the program")
 ```
-
-    {1: 3, 2: 5, 3: 1, 4: 3, 5: 2, 6: 2, 7: 1, 8: 2, 9: 2, 10: 5}
-    Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
-    
-    CPU model: Intel(R) Xeon(R) CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
-    Thread count: 1 physical cores, 2 logical processors, using up to 2 threads
-    
-    Optimize a model with 617 rows, 250 columns and 2026 nonzeros
-    Model fingerprint: 0x7c9deded
-    Variable types: 31 continuous, 219 integer (209 binary)
-    Coefficient statistics:
-      Matrix range     [1e+00, 1e+03]
-      Objective range  [1e+00, 1e+00]
-      Bounds range     [1e+00, 1e+00]
-      RHS range        [1e+00, 3e+03]
-    Presolve removed 69 rows and 89 columns
-    Presolve time: 0.00s
-    
-    Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
-    Thread count was 1 (of 2 available processors)
-    
-    Solution count 0
-    
-    Model is infeasible
-    Best objective -, best bound -, gap -
-
