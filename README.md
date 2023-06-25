@@ -28,6 +28,8 @@
 
 ### 1. Cloud-native Assembly Sceduling Problem Formulation
 
+![Framework](./img/workflow.png)
+
 * Determine operation processing priority to minimize total makespan of workflows 
 
 * Warm-up cost : time/resources to prepare an executor for running an operation 
@@ -45,9 +47,8 @@
 * ``WC[i][j]``Boolean components, 1 if warm-up time is required between O_i and O_j otherwise 0
 
 #### Objective Function
+![Objective Function](./img/objective_funciton.png)
 
-``Z = ∑_{i=1}^N ∑_{j=1}^N t[j] * X[i][j] + ∑_{k=1}^m ∑_{∀i,j \in I_Y} w[k] * C[i][j]
-``
 ### 2. Linear Regression and Heuristic Approach 
 
 * relax the problem to scheduling multiple workflows to one workflow
@@ -56,9 +57,9 @@
 * Objective function of the relaxed problem's optimal solution serves as a lower bound for the original problem
 
 ## References
-*Jungeun Shin (2022). Cloud-native Workflow Scheduling using a Hybrid Priority Rule and Dynamic Task Parallelism
-*Jinyang Xu & Rakesh Nagi. (2012). Solving Assembly Scheduling Problems With Tree-Structure Precedence Constraints: A Lagrangian Relaxation Approach
-*Yi, W., Ye, X., Shigang, C. (2017). Using Integer Programming for Workflow Scheduling in the Cloud
-*Sachin, M., Simin, H., Rakesh, N. (2012). Scheduling to minimize stringer utilization for continuous annealing operations.
-*Muhammad, A., Rakesh, N. (2011). Integrated lot sizing and scheduling for just-in-time production of Complex Assemblies with Finite Set-ups.
-*Muhammad, A., Rakesh, N. (2013). Integrated Scheduling of Material Handling and Manufacturing Activities for Just-In-Time Production of Complex Assemblies
+* Jungeun Shin (2022). Cloud-native Workflow Scheduling using a Hybrid Priority Rule and Dynamic Task Parallelism
+* Jinyang Xu & Rakesh Nagi. (2012). Solving Assembly Scheduling Problems With Tree-Structure Precedence Constraints: A Lagrangian Relaxation Approach
+* Yi, W., Ye, X., Shigang, C. (2017). Using Integer Programming for Workflow Scheduling in the Cloud
+* Sachin, M., Simin, H., Rakesh, N. (2012). Scheduling to minimize stringer utilization for continuous annealing operations.
+* Muhammad, A., Rakesh, N. (2011). Integrated lot sizing and scheduling for just-in-time production of Complex Assemblies with Finite Set-ups.
+* Muhammad, A., Rakesh, N. (2013). Integrated Scheduling of Material Handling and Manufacturing Activities for Just-In-Time Production of Complex Assemblies
