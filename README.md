@@ -2,7 +2,7 @@
 
 > **Objective** : Develop a mathematical model for solving the cloud-native assembly scheduling problem 
 
-** Main Challenge : dealing with large-scale cases **
+**Main Challenge : dealing with large-scale cases**
 
 ## Contents
 
