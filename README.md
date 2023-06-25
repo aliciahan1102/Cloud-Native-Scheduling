@@ -2,16 +2,13 @@
 
 > **Objective** : Develop a mathematical model for solving the cloud-native assembly scheduling problem 
 
-** Main Challenge : dealing with large-scale cases
-** Employ the LR approach to decompose the problem into subproblems, solve by heuristic approach
-
-### Goal : provides an effective approach to the cload-native assembly scheduling problem, where traditional methods struggle due to the complexity and scale of the problem 
-
+** Main Challenge : dealing with large-scale cases **
 
 ## Contents
 
-
-
+- [Data Source]https://github.com/aliciahan1102/Cloud-Native-Scheduling#data-sources)
+- [Frame Work](https://github.com/aliciahan1102/Cloud-Native-Scheduling#framework)
+- [Reference](https://github.com/aliciahan1102/Cloud-Native-Scheduling#references)
 
 
 
@@ -21,8 +18,9 @@
 
 - Creates sample workflows by setting multiple parameters (width, depth, max children per node, etc.)
 - Use Tree-structured graph networks to represent precedence relations 
-- Set the data to include only one work center 
-- Vertex : Operation / Edges : precedence dependencies among operations 
+
+- Vertex : Operation 
+- Edges : precedence dependencies among operations 
 
 ## FrameWork 
 
@@ -47,7 +45,7 @@
 * ``WC[i][j]``Boolean components, 1 if warm-up time is required between O_i and O_j otherwise 0
 
 #### Objective Function
-![Objective Function](./img/objective_funciton.png)
+![Objective Function](./img/objective_function.png)
 
 ### 2. Linear Regression and Heuristic Approach 
 
@@ -55,6 +53,8 @@
 * Divide one workflow to sub-workflows and prioritize each operation of sub-workflos
 
 * Objective function of the relaxed problem's optimal solution serves as a lower bound for the original problem
+
+
 
 ## References
 * Jungeun Shin (2022). Cloud-native Workflow Scheduling using a Hybrid Priority Rule and Dynamic Task Parallelism
